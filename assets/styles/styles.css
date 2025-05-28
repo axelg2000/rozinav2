@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+:root {
+  --primary-color: #f86349;
+  --font-title : 'Anton', sans-serif;
+  --font-minimalist: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+}
+
+
+/* ---------- NAV ---------- */
+nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  padding: 1rem 0;
+  font-family: var(--font-minimalist);
+}
+
+.nav-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-left,
+.nav-right,
+.nav-center {
+  position: absolute;
+  font-size: 0.7rem;
+  color: #333;
+  /* text-decoration: none; */
+}
+
+.nav-left {
+  left: 0.3rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-right {
+  right: 0.3rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+/* ---------- IMAGE CONTAINER ---------- */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.2);
+  transform-origin: 27% -20%; /* ← this now works correctly */
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------- TITLE ---------- */
+.overlay-content {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    line-height: 1; /* Removes extra vertical space */
+
+}
+
+.overlay-title {
+  font-family: var(--font-title);
+  font-size: clamp(4rem, 10vw, 8rem); /* Balanced and responsive */
+  color: var(--primary-color);
+  white-space: nowrap;
+  margin: 0;
+  padding : 0px;
+  /* text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); */
+}
+
+.overlay-subtitle {
+  font-family: var(--font-minimalist);
+  font-size: clamp(0.7rem, 1.7vw, 1.7rem); /* Scales at ~1/3 size of title */
+  color: #333;
+  margin: 0;
+  letter-spacing: 0.05em;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+}
