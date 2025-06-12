@@ -141,6 +141,7 @@ html, body {
   color: black;
   margin-top: 10px;
   text-align : right;
+  text-transform: uppercase;
 }
 
 .e-commerce-container,
