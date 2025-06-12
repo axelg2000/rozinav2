@@ -91,6 +91,12 @@ html, body {
   position: relative;
 }
 
+.white-navbar {
+  position :absolute;
+    color: black; /* Default color for links */
+
+}
+
 .navbar-about{
   color : black; 
   text-transform: uppercase;
