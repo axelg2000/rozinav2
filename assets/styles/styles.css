@@ -244,9 +244,15 @@ main {
   border : 0.5px solid black;
 }
 
+.brand-container.algoflex img {
+  object-position: center 43%; /* adjust the second value to move vertically */
+  
+}
 .brand-title {
   text-align: left;
   margin-top: 0.5rem;
   font-size: 1.2rem;
   text-transform: uppercase;
 }
+
+
