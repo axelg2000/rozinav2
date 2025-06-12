@@ -153,24 +153,24 @@ html, body {
   text-transform: uppercase;
 }
 
-.e-commerce-container,
-.projects-container,
-.costum-design-container {
+.e-commerce-container-work,
+.projects-container-work,
+.costum-design-container-work {
   position: relative;
   overflow: hidden;
 }
 
 /* Specific object positioning */
-.e-commerce-container img {
+.e-commerce-container-work img {
   object-fit: cover;
   object-position:100% 50%; /* 20% from the left (X), 50% from the top (Y) */
 }
 
-.projects-container img {
+.projects-container-work img {
     object-position: center 2%;
 }
 
-.costum-design-container img {
+.costum-design-container-work img {
   object-position: bottom;
 }
 
