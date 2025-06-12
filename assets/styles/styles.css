@@ -119,7 +119,7 @@ html, body {
   opacity: 1;
 }
 
-.work-page {
+.grey-bg {
   background-color: var(--secondary-color-grey);
 }
 
@@ -257,4 +257,64 @@ main {
   text-transform: uppercase;
 }
 
+.projects-title, .e-commerce-title, .work-title  {
+  padding : 20px;
+  font-size: 1.8rem;
+  text-align: end;
+}
 
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding : 0 20px;
+}
+
+.projects-item {
+   width: 100%;
+  max-width: 600px; /* Optional: limit width */
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.projects-item img,
+.projects-item video {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border : 0.5px solid black;
+}
+
+.project-item-title {
+   text-align: left;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+/* General styling for all images */
+.project-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Individual image adjustments */
+.upcycling-img {
+  object-position: center 40%;
+}
+
+.fashion-img {
+  object-position: center 10%;
+}
+
+.knitwear-img {
+  object-position: center 0%;
+
+}
+
+.editorial-img {
+  object-position: 100% 10%;
+}
