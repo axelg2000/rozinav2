@@ -20,6 +20,58 @@ html, body {
   font-family: var(--rubik-font);
 }
 
+/* navbar */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  z-index: 3;
+
+  display: flex;
+  justify-content: center; /* Center the menu */
+  align-items: center;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0.5rem 0;
+  margin: 0;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: black;
+  text-transform: uppercase;
+}
+
+.navbar-brand {
+  font-family: var(--titan-font);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-size: 2rem;
+  
+}
+
+.navbar-brand a {
+  text-decoration: none;
+  color: var(--primary-color-orange);
+}
+
+.grey-navbar {
+  background-color: transparent !important;
+  border: none;
+  box-shadow: none;
+  justify-content: space-between; /* Space between brand and menu */
+  align-items: center;
+}
+
+
+
 .image-container {
   width: 100vw;
   height: 100vh;
@@ -56,57 +108,11 @@ html, body {
 
 
 
-.navbar {
-  background-color: rgba(255, 255, 255, 0.9);
-  /* padding: 1rem; */
-  position: relative; /* ← was absolute */
- width: 90%;
-  z-index: 3; /* Ensure navbar is above the image */
-  margin: 0 auto; /* Center the navbar */
- 
-}
-
-.navbar-menu {
-  list-style: none;
-  display: flex;             /* Horizontal alignment */
-  gap: 2rem;                 /* Space between items */
-  padding: 5px;
-  margin: 0;
-  justify-content: space-between;  /* Center the menu items */
-}
 
 
-.navbar-menu li a {
-  text-decoration: none;
-  font-weight: bold;
-      color: black; /* Default color for links */
 
-}
 
-.navbar-menu li a.navbar-rozina {
-  font-family: var(--titan-font);
-  text-transform: uppercase;
-  color: var(--primary-color-orange); /* Or replace with a hex like #FF6600 */
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-decoration: none;
-  position: relative;
-}
 
-.white-navbar {
-  position :absolute;
-
-}
-
-.navbar-about{
-  color : black; 
-  text-transform: uppercase;
-}
-.navbar-menu li a {
-  text-decoration: none;
-  font-size : 0.8rem;
-
-}
 
 
 .overlay-title.show{
@@ -118,11 +124,7 @@ html, body {
 }
 
 
-.grey-navbar {
-  background-color: transparent !important;
-  border: none;
-  box-shadow: none;
-}
+
 
 .work-content-container {
   margin-top : 10px;
