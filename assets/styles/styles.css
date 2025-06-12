@@ -79,9 +79,11 @@ html, body {
 .navbar-menu li a {
   text-decoration: none;
   font-weight: bold;
+      color: black; /* Default color for links */
+
 }
 
-.navbar-rozina {
+.navbar-menu li a.navbar-rozina {
   font-family: var(--titan-font);
   text-transform: uppercase;
   color: var(--primary-color-orange); /* Or replace with a hex like #FF6600 */
@@ -93,7 +95,6 @@ html, body {
 
 .white-navbar {
   position :absolute;
-    color: black; /* Default color for links */
 
 }
 
