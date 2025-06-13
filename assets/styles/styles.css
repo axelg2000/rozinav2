@@ -259,7 +259,7 @@ main {
   text-transform: uppercase;
 }
 
-.projects-title, .e-commerce-title, .work-title  {
+.projects-title, .e-commerce-title, .work-title, .about-title  {
   padding : 20px;
   font-size: 1.8rem;
   text-align: end;
@@ -319,4 +319,118 @@ main {
 
 .editorial-img {
   object-position: 100% 10%;
+}
+
+
+.about-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-portrait img {
+   width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  border : 0.5px solid black;
+  object-position: center 45%;
+}
+
+.about-portrait {
+  text-align: right;
+}
+
+.about-contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  
+}
+
+.contact-social,
+.contact-email {
+  gap: 0.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: flex-start; /* Important! Align inner content left */
+}
+
+.contact-title {
+  font-size: 1.5rem;
+  color: var(--primary-color-orange);
+  text-transform: uppercase;
+  font-family: var(--titan-font);
+}
+
+.contact-social a,
+.contact-email a {
+  text-decoration: none;
+  color: inherit; /* Optional: match the surrounding text color */
+}
+
+
+/* slider  */
+.slide-track {
+  width: 100%;
+  display: flex;
+  gap: 3em;
+  overflow: hidden;
+}
+
+.slide-track img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  animation: scroll 20s linear infinite;
+}
+.slider {
+  padding-top : 2em;
+  padding: 2em 0em;
+}
+
+@keyframes scroll {
+  0% {transform: translateX(0);}
+  100% {transform: translatex(-1000%)}
+}
+
+.arrow-icon {
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+}
+
+/* footer */
+.footer {
+  background-color: var(--primary-color-orange);
+  color: white;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-text {
+  padding-top: 1rem;
+  font-size: 1.2rem;
+  font-family: var(--rubik-font);
+}
+
+.footer-rozina-name {
+  
+  font-family: var(--titan-font);
+  font-size: 6rem;
+  color: white;
+  letter-spacing: 0.15em;
+  
+  
 }
