@@ -277,16 +277,65 @@ main {
   border : 0.5px solid black;
 }
 
-.brand-container.algoflex img {
-  object-position: center 43%; /* adjust the second value to move vertically */
-  
-}
 .brand-title {
   text-align: left;
   margin-top: 0.5rem;
   font-size: 1.2rem;
   text-transform: uppercase;
 }
+
+@media (min-width: 768px) {
+  .e-commerce-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 20px; /* row gap, column gap */
+    padding: 0 40px;
+    justify-items: center; /* optional: center content in each cell */
+  }
+
+  .brand-container {
+    width: 100%;
+    max-width: none; /* Let grid control the width */
+  }
+
+  .brand-container img,
+  .brand-container video {
+    height: 300px; /* already defined */
+  }
+
+.brand-container.algoflex img {
+  object-position: center 43%; /* adjust the second value to move vertically */
+  
+}
+
+ .brand-container {
+    width: 100%;
+    position: relative; /* enables absolute positioning for overlay */
+  }
+
+    .brand-title {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%); /* centers horizontally and vertically */
+    padding: 10px 15px;
+    color: var(--primary-color-orange);
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: var(--font-bold);
+    margin: 0;
+    opacity: 0;
+    /* mix-blend-mode: exclusion; */
+; /* makes the text color mix with background */
+
+    pointer-events: none; /* optional: allow clicks to go through */
+  }
+   .brand-container:hover .brand-title {
+    opacity: 1;
+  }
+}
+
 
 .projects-title, .e-commerce-title, .work-title, .about-title  {
   padding : 20px;
@@ -668,5 +717,10 @@ main {
     width: 100%;
     height: auto; /* Let the browser set height based on the image ratio */
     display: block;
+  }
+    .grid-align-right {
+    grid-column: 2;       /* Force it into the second column */
+    justify-self: end;    /* Align it to the right of that column */
+    text-align: right;
   }
 }
