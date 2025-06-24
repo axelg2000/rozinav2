@@ -266,6 +266,7 @@ main {
   max-width: 600px; /* Optional: limit width */
   margin-bottom: 2rem;
   text-align: center;
+  text-decoration: none;
 }
 
 .brand-container img,
@@ -282,6 +283,13 @@ main {
   margin-top: 0.5rem;
   font-size: 1.2rem;
   text-transform: uppercase;
+  color: var(--primary-color-orange);
+  font-family: var(--font-bold);
+}
+
+.brand-title a {
+  text-decoration: none;
+  color: inherit; /* Optional: match the surrounding text color */
 }
 
 @media (min-width: 768px) {
