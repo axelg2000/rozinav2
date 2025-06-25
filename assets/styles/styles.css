@@ -161,7 +161,6 @@ html, body {
   width: 100%;
   height: 250px;
   object-fit: cover;
-  border-radius: 2px;
   display: block;
   border : 0.5px solid black; /* Optional: adds a border to images */
 }
@@ -203,13 +202,6 @@ html, body {
 
 
 
-.work-title, .design-title, .design-title-mobile {
-  font-size: 1.5rem;
-  color: black;
-  margin-top: 10px;
-  text-align : right;
-  text-transform: uppercase;
-}
 
 .e-commerce-container-work,
 .projects-container-work,
@@ -390,10 +382,11 @@ main {
 }
 
 
-.projects-title, .about-title  {
-  padding : 20px;
-  font-size: 1.8rem;
+.projects-title, .about-title, .work-title, .design-title, .design-title-mobile  {
+  font-size: 2rem;
   text-align: end;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .projects-title-container {
@@ -406,10 +399,8 @@ main {
 .projects-title {
   width: 90%;
   max-width: 1200px;
-  text-align: right; /* ensures text is pushed to the right */
-  font-size: 2rem;
-  font-weight: bold;
-   
+  margin-bottom: 20px; /* adds space below the title */
+
 }
 
 /* Keep your existing container/grid styles */
@@ -829,7 +820,6 @@ main {
   gap: 20px;
   width: 90%;
   margin: auto;
-  padding: 20px;
   align-items: flex-start;
 }
 
@@ -845,6 +835,7 @@ main {
   height: auto;
   display: block;
   object-fit: contain;
+  border: 0.5px solid black; /* Optional: adds a border to images */
 }
 
 /* Default: desktop title visible, mobile title hidden */
