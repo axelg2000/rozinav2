@@ -91,6 +91,7 @@ html, body {
   box-shadow: none;
   justify-content: space-between; /* Space between brand and menu */
   align-items: center;
+  margin-top :6px;
 }
 
 .white-navbar {
@@ -135,14 +136,6 @@ html, body {
 }
 
 
-
-
-
-
-
-
-
-
 .overlay-title.show{
   opacity: 1;
 }
@@ -155,25 +148,62 @@ html, body {
 
 
 .work-content-container {
-  margin-top : 10px;
   width: 90%;
-  margin: 0 auto;
+  /* max-width: 1200px; */
+  /* margin: 0 auto; */
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin: 0 auto;
 }
 
-/* Common styling for all images inside the containers */
-.work-content-container img {
+.work-item img {
   width: 100%;
-  height: 250px; /* or any fixed height */
+  height: 250px;
   object-fit: cover;
-  object-position: center; /* can be changed to top or bottom if needed */
+  border-radius: 2px;
   display: block;
-  border-radius: 2px; /* optional */
+  border : 0.5px solid black; /* Optional: adds a border to images */
 }
 
-.work-title {
+.work-item {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden; /* Optional: prevents overlay from leaking out */
+}
+
+.half-width-row {
+  display: flex;
+  flex-direction: column; /* stacked on mobile */
+  gap: 1rem;
+}
+
+.work-item img {
+    object-position: center 0%; /* adjust the second value to move vertically */
+
+
+}
+
+/* Desktop layout (≥768px): side-by-side for 2nd and 3rd */
+@media (min-width: 768px) {
+  .half-width-row {
+    flex-direction: row;
+  }
+
+  .work-item {
+    flex: 1;
+  }
+
+  .work-item img {
+    height: 450px;
+  }
+}
+
+
+
+.work-title, .design-title, .design-title-mobile {
   font-size: 1.5rem;
   color: black;
   margin-top: 10px;
@@ -253,6 +283,7 @@ main {
   font-size: 1.8rem;
   text-align: end;
   margin-right: 20px;
+  margin-bottom: 20px;
 }
 
 .e-commerce-container {
@@ -304,8 +335,17 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px 10px; /* row gap, column gap */
-    padding: 0 40px;
+    /* padding: 0 40px; */
     justify-items: center; /* optional: center content in each cell */
+    width : 90%;
+    margin: 0 auto; /* centers the grid */
+  }
+
+  .e-commerce-title {
+    text-align: end; /* centers the title */
+    width: 90%; /* full width for the title */
+    margin : 0 auto; /* centers the title */
+    margin-bottom: 20px;
   }
 
   .brand-container {
@@ -350,24 +390,42 @@ main {
 }
 
 
-.projects-title, .e-commerce-title, .work-title, .about-title  {
+.projects-title, .about-title  {
   padding : 20px;
   font-size: 1.8rem;
   text-align: end;
 }
 
+.projects-title-container {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* aligns the title to the right */
+}
+
+/* Title box aligned to image container width */
+.projects-title {
+  width: 90%;
+  max-width: 1200px;
+  text-align: right; /* ensures text is pushed to the right */
+  font-size: 2rem;
+  font-weight: bold;
+   
+}
+
+/* Keep your existing container/grid styles */
 .projects-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding : 0 20px;
+  gap: 1.5rem;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .projects-item {
-   width: 100%;
+  width: 100%;
   max-width: 600px; /* Optional: limit width */
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   text-align: center;
 }
 
@@ -380,19 +438,25 @@ main {
   border : 0.5px solid black;
 }
 
+@media (min-width: 768px) {
+  .projects-item img,
+  .projects-item video {
+    height: 300px;
+  }
+  .projects-title {
+    margin-right : 20px; /* Optional: adds some space from the right edge */
+
+}
+}
+
 .project-item-title {
-   text-align: left;
+  text-align: left;
   margin-top: 0.5rem;
   font-size: 1.2rem;
   text-transform: uppercase;
 }
 
-/* General styling for all images */
-.project-img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
+
 
 /* Individual image adjustments */
 .upcycling-img {
@@ -412,6 +476,23 @@ main {
   object-position: 100% 10%;
 }
 
+
+/* On desktop: 2 per row */
+@media (min-width: 768px) {
+  .projects-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+  }
+
+  .projects-item {
+    width: calc(50% - 1rem); /* 2 columns with gap */
+  }
+
+  .project-img {
+    height: 450px;
+  }
+}
 
 .about-container {
   width: 90%;
@@ -479,7 +560,7 @@ main {
 .slide-track {
   width: 100%;
   display: flex;
-  gap: 3em;
+  gap: 5em;
   overflow: hidden;
 }
 
@@ -737,5 +818,56 @@ main {
     grid-column: 2;       /* Force it into the second column */
     justify-self: end;    /* Align it to the right of that column */
     text-align: right;
+  }
+}
+
+/* design page */
+/* design page */
+/* Base layout (desktop first) */
+.design-wrapper {
+  display: flex;
+  gap: 20px;
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.design-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.design-column img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Default: desktop title visible, mobile title hidden */
+.design-title {
+  display: block;
+
+}
+.design-title-mobile {
+  display: none;
+}
+
+/* Mobile: one column layout and mobile title */
+@media (max-width: 768px) {
+  .design-wrapper {
+    flex-direction: column;
+  }
+
+  .design-title {
+    display: none;
+  }
+
+  .design-title-mobile {
+    display: block;
+ 
   }
 }
