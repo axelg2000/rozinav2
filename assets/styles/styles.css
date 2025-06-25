@@ -637,7 +637,7 @@ main {
   overflow: hidden;
   position: relative;
   width: 100%;
-  margin-top : 20px;
+  margin-top : 40px;
 }
 .slider::before, .slider::after {
 /*   background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); */
@@ -668,7 +668,7 @@ main {
 }
 
 .slide img {
-  height: 60px; /* Adjust this as needed */
+  height: 80px; /* Adjust this as needed */
   width: auto;  /* Keeps the logo proportions */
   object-fit: contain;
   padding: 10px; /* Optional: adds spacing inside */
