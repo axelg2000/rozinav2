@@ -249,8 +249,10 @@ main {
 }
 
 .e-commerce-title{
-  padding : 20px;
+  /* padding : 20px; */
   font-size: 1.8rem;
+  text-align: end;
+  margin-right: 20px;
 }
 
 .e-commerce-container {
@@ -292,6 +294,11 @@ main {
   color: inherit; /* Optional: match the surrounding text color */
 }
 
+.brand-container.algoflex img {
+  object-position: center 40%; /* adjust the second value to move vertically */
+  
+}
+
 @media (min-width: 768px) {
   .e-commerce-container {
     display: grid;
@@ -308,13 +315,10 @@ main {
 
   .brand-container img,
   .brand-container video {
-    height: 300px; /* already defined */
+    height: 350px; /* already defined */
   }
 
-.brand-container.algoflex img {
-  object-position: center 43%; /* adjust the second value to move vertically */
-  
-}
+
 
  .brand-container {
     width: 100%;
@@ -656,11 +660,13 @@ main {
   object-fit: contain;
   display: block;
   margin: 0 auto;
+  border : 0.5px solid black; /* Optional: adds a border to images */
 }
 
 .image-grid video {
   width: 100%;
   height: auto;
+  border : 0.5px solid black; /* Optional: adds a border to videos */
  
 }
 
