@@ -487,20 +487,20 @@ main {
 
 
 /* Individual image adjustments */
-.upcycling-img {
+.projects-item.upcycling .project-img {
   object-position: center 40%;
 }
 
-.fashion-img {
+.projects-item.fashion-design .project-img {
   object-position: center 10%;
 }
 
-.knitwear-img {
+.projects-item.knitwear-design .project-img {
   object-position: center 0%;
 
 }
 
-.editorial-img {
+.projects-item.editorial .project-img {
   object-position: 100% 10%;
 }
 
