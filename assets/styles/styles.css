@@ -614,38 +614,65 @@ main {
 
 
 /* slider  */
-.slide-track {
-  width: 100%;
+/* body {
+  align-items: center;
+  background: #e3e3e3;
   display: flex;
-  gap: 5em;
-  overflow: hidden;
-}
-
-.slide-track img {
-  width: 60px;
-  height: 60px;
-  object-fit: contain; /* keeps ratio */
-  border-radius: 20%;
-  background-color: white; /* optional: ensures logos on transparent backgrounds look good */
-  padding: 10px; /* optional: adds spacing inside the circle */
-  animation: scroll 20s linear infinite;
+  height: 100vh;
+  justify-content: center;
+} */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
 }
 .slider {
-  padding-top : 3em;
-  padding-bottom: 2em;
+/*   background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125); */
+  height: 150px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin-top : 20px;
+}
+.slider::before, .slider::after {
+/*   background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); */
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slider .slide {
+  height: 100px;
+  width: 350px;
+  padding-left: 20px;
 }
 
-@keyframes scroll {
-  0% {transform: translateX(0);}
-  100% {transform: translatex(-1000%)}
+.slide img {
+  height: 60px; /* Adjust this as needed */
+  width: auto;  /* Keeps the logo proportions */
+  object-fit: contain;
+  padding: 10px; /* Optional: adds spacing inside */
 }
-
-.arrow-icon {
-  width: 14px;
-  height: 14px;
-  vertical-align: middle;
-}
-
 
 
 
