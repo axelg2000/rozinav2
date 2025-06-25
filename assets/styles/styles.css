@@ -382,62 +382,33 @@ main {
 }
 
 
-.projects-title, .about-title, .work-title, .design-title, .design-title-mobile  {
-  font-size: 2rem;
-  text-align: end;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.projects-title-container {
-  width: 100%;
-  display: flex;
-  justify-content: center; /* aligns the title to the right */
-}
-
-/* Title box aligned to image container width */
-.projects-title {
-  width: 90%;
-  max-width: 1200px;
-  margin-bottom: 20px; /* adds space below the title */
-
-}
-
-/* Keep your existing container/grid styles */
+/* projects page */
+/* MOBILE-FIRST STYLES */
 .projects-container {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  width : 90%;
+  margin : 0 auto;
 }
 
 .projects-item {
   width: 100%;
-  max-width: 600px; /* Optional: limit width */
-  margin-bottom: 0.5rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
   text-align: center;
+  text-decoration: none;
+  position: relative;
 }
 
 .projects-item img,
 .projects-item video {
   width: 100%;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
   display: block;
-  border : 0.5px solid black;
-}
-
-@media (min-width: 768px) {
-  .projects-item img,
-  .projects-item video {
-    height: 300px;
-  }
-  .projects-title {
-    margin-right : 20px; /* Optional: adds some space from the right edge */
-
-}
+  border: 0.5px solid black;
 }
 
 .project-item-title {
@@ -445,6 +416,72 @@ main {
   margin-top: 0.5rem;
   font-size: 1.2rem;
   text-transform: uppercase;
+  color: var(--primary-color-orange);
+  font-family: var(--font-bold);
+}
+
+/* remove default title spacing for link */
+.project-item-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.projects-title-container {
+  width : 90%;
+  margin : 0 auto;
+  margin-bottom : 20px;
+}
+
+/* DESKTOP: GRID + HOVER OVERLAY */
+@media (min-width: 768px) {
+  .projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 10px; /* row gap, column gap */
+    justify-items: center;
+    margin: 0 auto;
+  }
+
+  .projects-item {
+    max-width: 100%;
+    margin-bottom: 0;
+    position: relative;
+  }
+
+  .projects-item img,
+  .projects-item video {
+    height: 350px;
+  }
+
+  .project-item-title {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    padding: 10px 15px;
+    color: var(--primary-color-orange);
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: var(--font-bold);
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .projects-item:hover .project-item-title {
+    opacity: 1;
+  }
+}
+
+
+
+.projects-title, .about-title, .work-title, .design-title, .design-title-mobile  {
+  font-size: 2rem;
+  text-align: end;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 
@@ -468,22 +505,6 @@ main {
 }
 
 
-/* On desktop: 2 per row */
-@media (min-width: 768px) {
-  .projects-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1.4rem;
-  }
-
-  .projects-item {
-    width: calc(50% - 1rem); /* 2 columns with gap */
-  }
-
-  .project-img {
-    height: 450px;
-  }
-}
 
 .about-container {
   width: 90%;
