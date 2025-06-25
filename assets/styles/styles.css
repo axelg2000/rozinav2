@@ -303,7 +303,7 @@ main {
   .e-commerce-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px 20px; /* row gap, column gap */
+    gap: 10px 10px; /* row gap, column gap */
     padding: 0 40px;
     justify-items: center; /* optional: center content in each cell */
   }
@@ -311,6 +311,7 @@ main {
   .brand-container {
     width: 100%;
     max-width: none; /* Let grid control the width */
+    margin-bottom: 0; 
   }
 
   .brand-container img,
