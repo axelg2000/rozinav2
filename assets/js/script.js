@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', () => {
+  // Fade-in .overlay-title on scroll
   const fadeInElements = document.querySelectorAll('.overlay-title');
   if (fadeInElements.length) {
     const fadeInObserver = new IntersectionObserver(entries => {
@@ -14,4 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     fadeInElements.forEach(el => fadeInObserver.observe(el));
   }
+
+  // Ensure all videos are muted and autoplay-compatible
+  const videos = document.querySelectorAll('video');
+  console.log (`Found ${videos.length} video(s) on the page.`);
+  videos.forEach(video => {
+    video.muted = true;
+    video.autoplay = true;
+    video.playsInline = true;
+    video.loop = true;
+    video.load();
+  });
 });

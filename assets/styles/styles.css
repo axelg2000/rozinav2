@@ -109,23 +109,100 @@ html, body {
 
 
 
-.image-container {
-  width: 100vw;
+
+
+.index-page-body {
+  margin: 0;
+  padding: 0;
   height: 100vh;
-  position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-.image-container img {
+.index-page-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 10px;
+  justify-content: flex-end;
+}
+
+.index-page-menu a {
+  text-decoration: none;
+  color: black;
+  font-family: var(--font-body);
+    font-size : 1rem;
+
+}
+
+.index-page-main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.index-page-title {
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: var(--secondary-color-grey, #444);
+  font-family: var(--font-bold);
+  text-shadow: 6px 6px 7px rgba(248, 99, 73, 0.4);
+}
+
+/* FOOTER (fixed at bottom) */
+.index-page-footer {
+  position: fixed;
+  bottom: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Make the image fill and crop */
-  position: absolute;
-  top: -1%;
-  left: 0;
-  transform: scale(1.10); /* Zoom in by 5% */
-
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  z-index: 100;
+  text-decoration: none;
+  color: black;
+  font-family: var(--font-body);
 }
+
+.index-page-footer p {
+  text-decoration: none;
+  color: black;
+  font-family: var(--font-body);
+  font-size : 1rem;
+}
+
+
+
+@media (min-width: 1200px) {
+  .index-page-title {
+    font-size: 14rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .overlay-title {
   position: absolute;
@@ -144,6 +221,8 @@ text-shadow: 6px 6px 7px rgba(248, 99, 73, 0.4);  opacity: 0;
 }
 
 
+
+
 .overlay-title.show{
   opacity: 1;
 }
@@ -158,8 +237,41 @@ text-shadow: 6px 6px 7px rgba(248, 99, 73, 0.4);  opacity: 0;
    
   }
 }
+/* Prevent scroll only on this specific page */
+.main-landing {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  margin : 0 auto;
+}
 
+/* Center the title */
+.title-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
 
+/* Fix the footer to the bottom */
+.footer-main-page {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+}
+
+.footer-content p {
+  margin: 0;
+  padding: 0px;
+  color: rgb(12, 11, 11);
+  font-size: 0.8rem;
+}
 
 
 .work-content-container {
@@ -298,7 +410,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding : 0 20px;
+  padding : 0 0px;
 }
 
 .brand-container {
@@ -772,7 +884,6 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 20px;
 }
 
 /* svg  */
