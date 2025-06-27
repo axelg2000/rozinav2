@@ -1103,13 +1103,13 @@ main {
 
 @media (max-width: 600px) {
   .masonry-grid {
-    column-count: 2;
+    column-count: 3;
   }
 }
 
 @media (max-width: 400px) {
   .masonry-grid {
-    column-count: 2;
+    column-count: 3;
   }
 }
 
