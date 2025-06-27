@@ -644,7 +644,23 @@ main {
   object-position: 100% 10%;
 }
 
+.masonry-placeholder-portrait,
+.masonry-placeholder-landscape {
+  width: 100%;
+  margin-bottom: 16px;
+  background-color: transparent;
+  break-inside: avoid;
+}
 
+/* Vertical image size (e.g. 3:4) */
+.masonry-placeholder-portrait {
+  aspect-ratio: 3 / 4;
+}
+
+/* Horizontal image size (e.g. 4:3) */
+.masonry-placeholder-landscape {
+  aspect-ratio: 4 / 3;
+}
 
 .about-container {
   width: 90%;
@@ -1093,7 +1109,14 @@ main {
 
 @media (max-width: 400px) {
   .masonry-grid {
-    column-count: 1;
+    column-count: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .masonry-placeholder-portrait,
+  .masonry-placeholder-landscape {
+    display: none;
   }
 }
 
