@@ -421,6 +421,10 @@ main {
   text-decoration: none;
 }
 
+.brand-container.milka, .projects-item.editorial {
+  margin-bottom: 0;
+}
+
 .brand-container img,
 .brand-container video {
   width: 100%;
@@ -740,15 +744,7 @@ main {
   color: inherit; /* Optional: match the surrounding text color */
 }
 
-
-/* slider  */
-/* body {
-  align-items: center;
-  background: #e3e3e3;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-} */
+/* slider */
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -758,9 +754,6 @@ main {
   }
 }
 .slider {
-/*   background: white;
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125); */
-  height: 150px;
   margin: auto;
   overflow: hidden;
   position: relative;
@@ -813,14 +806,23 @@ main {
   justify-content: center; /* centers content horizontally */
   align-items: center; 
   flex-direction: column;
+      margin-top: 20px;
+
+ 
 
 }
+/* 
+@media (min-width: 768px) {
+  .footer {
+  }
+} */
 
 .footer-content-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width : 100%;
+  padding-top : 1rem;
 }
 
 .footer-contact {
