@@ -616,6 +616,14 @@ main {
   color : #807e7e;
 }
 
+.design-title-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 
 
 /* Individual image adjustments */
@@ -1049,51 +1057,43 @@ main {
 /* design page */
 /* design page */
 /* Base layout (desktop first) */
-.design-wrapper {
-  display: flex;
-  gap: 20px;
+.masonry-grid {
+  column-count: 6;
+  column-gap: 16px;
   width: 90%;
   margin: auto;
-  align-items: flex-start;
 }
 
-.design-column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.design-column img {
+.masonry-grid img {
   width: 100%;
   height: auto;
+  margin-bottom: 16px;
   display: block;
-  object-fit: contain;
-  border: 0.5px solid black; /* Optional: adds a border to images */
+  break-inside: avoid;
 }
 
-/* Default: desktop title visible, mobile title hidden */
-.design-title {
-  display: block;
-
-}
-.design-title-mobile {
-  display: none;
-}
-
-/* Mobile: one column layout and mobile title */
-@media (max-width: 768px) {
-  .design-wrapper {
-    flex-direction: column;
+/* Responsive columns */
+@media (max-width: 1200px) {
+  .masonry-grid {
+    column-count: 4;
   }
+}
 
-  .design-title {
-    display: none;
+@media (max-width: 900px) {
+  .masonry-grid {
+    column-count: 3;
   }
+}
 
-  .design-title-mobile {
-    display: block;
- 
+@media (max-width: 600px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 400px) {
+  .masonry-grid {
+    column-count: 1;
   }
 }
 
