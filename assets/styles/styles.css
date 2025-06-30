@@ -1074,7 +1074,7 @@ main {
 /* design page */
 /* Base layout (desktop first) */
 .masonry-grid {
-  column-count: 6;
+  column-count: 8;
   column-gap: 16px;
   width: 90%;
   margin: auto;
@@ -1113,12 +1113,12 @@ main {
   }
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .masonry-placeholder-portrait,
   .masonry-placeholder-landscape {
     display: none;
   }
-}
+} */
 
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
