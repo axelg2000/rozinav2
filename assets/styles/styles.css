@@ -4,6 +4,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 @font-face {
+  font-family: 'Rubik';
+  src: url('assets/styles/fonts/Rubik-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* supports all weights from 100 to 900 */
+  font-style: normal;
+}
+
+/* Italic Variable Font */
+@font-face {
+  font-family: 'Rubik';
+  src: url('assets/styles/fonts/Rubik-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+@font-face {
   font-family: 'RadioGrotesk';
   src: url('./fonts/RadioGrotesk-Regular.woff2') format('woff2');
   font-weight: normal;
@@ -23,15 +38,7 @@
 
 /* css roots */
 :root {
-  --primary-color-orange: #f86349;
-  --secondary-color-grey: #eeeeee;
-  --titan-font: 'Titan One', sans-serif;
-  --rubik-font: 'Rubik', sans-serif;
-  --font-body: 'RadioGrotesk', sans-serif;
-  --font-bold: 'MonumentExtended', sans-serif;
-  --helvetica-neue-font: 'Helvetica Neue', Arial, sans-serif;
-  --inter-font : 'Inter', sans-serif;
-
+  --main-font: 'Rubik', sans-serif;
 }
 
 /* styles */
@@ -46,6 +53,8 @@ html, body {
 .navbar {
   background-color: #ffffff; /* example grey, change as needed */
   padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-family: var(--main-font);
 }
 
 .navbar-menu {
@@ -68,6 +77,7 @@ html, body {
 .navbar-menu a {
   text-decoration: none;
   color: black;
+  text-transform: uppercase;
 }
 
 
@@ -91,7 +101,7 @@ html, body {
   display: block;
 }
 
-.cukovy-img { object-position: center 20%; }
+.cukovy-img { object-position: center 10%; }
 .babyark-img { object-position: 20% center; }
 .costume-design-img { object-position: center 90%; } /* fine-tune horizontally */
 .image-grid .nivea-video {
@@ -106,3 +116,57 @@ html, body {
   /* object-fit: contain;   no cropping */
   object-position: 50% 50%;
 }.red-img { object-position: 20% 60%; }
+
+
+
+.content-stack{
+  display:flex;
+  flex-direction:column;}
+
+.section h1.name{
+  line-height:1.1;
+  margin:0 0 12px;
+  font-weight:700;
+}
+
+.section h2{
+  line-height:1.2;
+  margin:0 0 10px;
+  font-weight:700;
+}
+
+.section h3{
+  font-size: var(--h3);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin: 22px 0 8px;
+  color: var(--muted);
+}
+
+.section p, .section li{
+  font-size: var(--body);
+  line-height:1.65;
+  margin:0;
+}
+
+.section + .section{
+  border-top: 1px solid rgba(0,0,0,.07);
+  padding-top: calc(var(--gap)*1.2);
+}
+
+/* Behance line */
+.behance a{
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Education list */
+.edu-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  gap:14px;
+}
+.edu-list li strong{ font-weight:600; }
