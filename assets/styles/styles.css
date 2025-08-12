@@ -48,6 +48,7 @@ html, body {
   padding: 0;
   height: 100vh;
   font-family: var(--main-font);
+  background-color: #e2e2e2; /* example grey, change as needed */
 }
 
 .navbar {
@@ -224,3 +225,46 @@ html, body {
   padding: 10px; /* Optional: adds spacing inside */
 }
 
+
+/* footer */
+.footer {
+  font-family: sans-serif;
+  padding-bottom :0px;
+  padding-top: 20px;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+    padding-bottom: 20px;
+
+}
+
+.footer-section h4 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.footer-section p,
+.footer-section a {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #000000;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.8rem;
+  background-color: #fff;
+  color: #575757;
+  width: 100%;
+  padding: 5px;
+}
