@@ -256,7 +256,7 @@ html, body {
 }
 
 .slide img {
-  height: 80px; /* Adjust this as needed */
+  height: 60px; /* Adjust this as needed */
   width: auto;  /* Keeps the logo proportions */
   object-fit: contain;
   padding: 10px; /* Optional: adds spacing inside */
@@ -266,17 +266,21 @@ html, body {
 /* footer */
 .footer {
   font-family: sans-serif;
-  padding-bottom :0px;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 .footer-top {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  text-align: center;
-    padding-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 20px;
+  text-align: left;
+}
 
+.footer-section {
+  flex: 1 1 300px; /* grow, shrink, and base width */
+  max-width: 400px;
 }
 
 .footer-section h4 {
@@ -294,14 +298,55 @@ html, body {
 }
 
 .footer-section a:hover {
-  color: #fff;
+  color: #444444;
 }
 
 .footer-bottom {
   text-align: center;
   font-size: 0.8rem;
-  background-color: #fff;
+  background-color: #ffffff;
   color: #575757;
   width: 100%;
   padding: 5px;
+}
+
+.email-axel a {
+  color: #000000;
+  text-decoration: none;
+}
+
+
+
+.photo-container_cukovy {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center horizontally */
+  gap: 5px; /* space between images */
+}
+
+.photo-container_cukovy img {
+  max-width: 100%;
+  height: auto;
+}
+
+.description-container_cukovy{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+.arrow-icon {
+  width: 15px;
+  height: 15px;
+}
+
+
+.small-hr {
+  width: 50px;
+  background-color: #000000;
+  margin: 0px 10px; /* centers the line */
+}
+
+.designer-info {
+  margin-bottom : 10px;
 }
