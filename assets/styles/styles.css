@@ -56,43 +56,13 @@ html, body {
   padding: 0.5rem 1rem;
   font-weight: bold;
   font-family: var(--main-font);
-  opacity: 0;
-  transform: translateY(-12px);
-  transition: opacity 500ms ease, transform 500ms ease;
-  will-change: opacity, transform;
+
 
 }
 
-.page-ready .navbar {
-  opacity: 1;
-  transform: none;
-}
 
-.reveal {
-  opacity: 0;
-  transform: translateY(8px);
-  filter: blur(3px);
-  transition:
-    opacity 700ms ease,
-    transform 700ms ease,
-    filter 700ms ease;
-  will-change: opacity, transform, filter;
-}
-.reveal.is-visible {
-  opacity: 1;
-  transform: none;
-  filter: blur(0);
-}
 
-/* Optional: slightly stagger items inside the grid */
-.image-grid > *:nth-child(1)  { transition-delay: 60ms; }
-.image-grid > *:nth-child(2)  { transition-delay: 120ms; }
-.image-grid > *:nth-child(3)  { transition-delay: 180ms; }
-.image-grid > *:nth-child(4)  { transition-delay: 180ms; }
-.image-grid > *:nth-child(5)  { transition-delay: 180ms; }
-.image-grid > *:nth-child(6)  { transition-delay: 180ms; }
-.image-grid > *:nth-child(7)  { transition-delay: 180ms; }
-.image-grid > *:nth-child(8)  { transition-delay: 180ms; }
+
 
 
 .navbar-menu {
@@ -317,22 +287,87 @@ html, body {
 
 
 
-.photo-container_cukovy {
+.photo-container {
   display: flex;
   flex-direction: column;
   align-items: center; /* center horizontally */
   gap: 5px; /* space between images */
 }
 
-.photo-container_cukovy img {
+.photo-container img, .photo-container video {
   max-width: 100%;
   height: auto;
 }
 
-.description-container_cukovy{
+.description-container_cukovy, .description-container_babyark, .description-container_nivea {
   padding-left: 10px;
   padding-right: 10px;
 }
+
+.photo-container img.medium-zoomed-image {
+  height: 400px;
+  object-fit: cover;
+  
+}
+
+.photo-container img.big-zoomed-image {
+  height: 600px;
+  object-fit: cover;
+}
+
+.photo-container img.slight-zoomed-image {
+  height: 400px;
+  object-fit: cover;
+}
+
+.photo-container img.medium-vertical-cropped {
+  height: 450px;
+  width : 100%;
+  object-fit: cover;
+}
+
+.photo-container img.slight-vertical-cropped {
+  height: 600px;
+  width : 100%;
+  object-fit: cover;
+}
+
+.photo-container img.big-vertical-cropped {
+  height: 300px;
+  width : 100%;
+  object-fit: cover;
+}
+
+/* Specific focus positions */
+.focus-center       { object-position: 50% 50%; }
+.focus-slight-bottom { object-position: 50% 63%; }
+.focus-left         { object-position: 0% 50%; }
+.focus-slight-left  { object-position: 30% 50%; }
+.focus-very-slight-left { object-position: 40% 50%; }
+.focus-right        { object-position: 100% 50%; }
+.focus-slight-right { object-position: 70% 50%; }
+.focus-top          { object-position: 50% 0%; }
+.focus-bottom       { object-position: 50% 100%; }
+.focus-right-top    { object-position: 80% 20%; }
+.focus-left-bottom  { object-position: 10% 90%; }
+
+
+
+.award-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+ width : 100%;
+  margin: 0 auto;
+}
+
+.award-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1; /* ensures square shape */
+  object-fit: contain;
+}
+
+
 
 
 .arrow-icon {
@@ -344,9 +379,102 @@ html, body {
 .small-hr {
   width: 50px;
   background-color: #000000;
-  margin: 0px 10px; /* centers the line */
+  margin: 10px 10px; /* centers the line */
 }
 
 .designer-info {
   margin-bottom : 10px;
 }
+
+.image-grid {
+display: flex;
+flex-wrap: wrap;
+gap: 5px;
+justify-content: center;
+}
+
+.grid-img {
+width: 200px;
+height: 140px;
+object-fit: cover;
+position: relative;
+}
+
+.masonry-grid {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 15px;
+}
+
+.masonry-grid img {
+  margin-top : 20px;
+height: auto;
+transition: transform 0.3s ease;
+object-fit: cover;
+position: relative;
+}
+
+
+.vertical-image {
+  width: 110px;
+
+}
+
+.big-vertical-image {
+  width: 200px;
+
+}
+
+.w-medium {
+  max-height: 150px;
+  width: auto ;
+  
+}
+
+.w-small {
+  max-height: 120px;
+  width: auto ;
+  
+}
+
+/* Pure CSS chaos */
+.masonry-grid img:nth-child(1)  { transform: rotate(-8deg) translate(-8px, 4px); z-index: 2; }
+.masonry-grid img:nth-child(2)  { transform: rotate(6deg) translate(12px, -5px); z-index: 1; }
+.masonry-grid img:nth-child(3)  { transform: rotate(-5deg) translate(-6px, 3px); z-index: 3; }
+.masonry-grid img:nth-child(4)  { transform: rotate(7deg) translate(8px, -4px); z-index: 1; }
+.masonry-grid img:nth-child(5)  { transform: rotate(-7deg) translate(-10px, 5px); z-index: 2; }
+.masonry-grid img:nth-child(6)  { transform: rotate(4deg) translate(6px, -2px); z-index: 1; }
+.masonry-grid img:nth-child(7)  { transform: rotate(-6deg) translate(-5px, 7px); z-index: 3; }
+.masonry-grid img:nth-child(8)  { transform: rotate(5deg) translate(7px, -3px); z-index: 2; }
+.masonry-grid img:nth-child(9)  { transform: rotate(-4deg) translate(-7px, 6px); z-index: 1; }
+.masonry-grid img:nth-child(10) { transform: rotate(3deg) translate(6px, -5px); z-index: 2; }
+.masonry-grid img:nth-child(11) { transform: rotate(-3deg) translate(-4px, 4px); z-index: 1; }
+.masonry-grid img:nth-child(12) { transform: rotate(8deg) translate(8px, -6px); z-index: 3; }
+.masonry-grid img:nth-child(13) { transform: rotate(-2deg) translate(-6px, 4px); z-index: 2; }
+.masonry-grid img:nth-child(14) { transform: rotate(6deg) translate(10px, -4px); z-index: 1; }
+.masonry-grid img:nth-child(15) { transform: rotate(-5deg) translate(-8px, 5px); z-index: 3; }
+.masonry-grid img:nth-child(16) { transform: rotate(7deg) translate(6px, -3px); z-index: 2; }
+.masonry-grid img:nth-child(17) { transform: rotate(-6deg) translate(-5px, 6px); z-index: 1; }
+.masonry-grid img:nth-child(18) { transform: rotate(4deg) translate(7px, -2px); z-index: 2; }
+.masonry-grid img:nth-child(19) { transform: rotate(-4deg) translate(-6px, 5px); z-index: 3; }
+.masonry-grid img:nth-child(20) { transform: rotate(5deg) translate(9px, -6px); z-index: 1; }
+  .masonry-grid img:nth-child(21) { transform: rotate(-5deg) translate(9px, -6px); z-index: 1; }
+.masonry-grid img:nth-child(22) { transform: rotate(5deg) translate(9px, -6px); z-index: 1; }
+.masonry-grid img:nth-child(23) { transform: rotate(-3deg) translate(9px, -6px); z-index: 1; }
+.masonry-grid img:nth-child(24) { transform: rotate(5deg) translate(9px, -3px); z-index: 1; }
+
+
+.masonry-grid img:hover {
+transform: scale(1.1) rotate(0deg) translate(0, 0);
+z-index: 10;
+}
+
+
+.costume-design-cover {
+  width: 390px !important; /* or 200px if you want it even bigger */
+  z-index: 5;
+  transform: rotate(-2deg) translate(5px, -5px);
+}
+
+
