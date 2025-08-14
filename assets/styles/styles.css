@@ -89,42 +89,114 @@ html, body {
 }
 
 
+/* Default: 1 column for mobile */
 .image-grid {
-  display: flex;
-  flex-direction: column;  /* Stack images vertically */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
   padding: 0;
   margin: 0;
-  gap: 2px; /* Remove any gap between images */
-
+  width: 100%;
+  background-color: #fff; /* example grey, change as needed */
+  border-bottom: 5px solid #fff; /* example black, change as needed */
 }
 
 .image-grid a {
+  position: relative;
+  display: block;
+  overflow: hidden;}
+
+.image-grid img,
+.image-grid video {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
   display: block;
 }
 
-.image-grid img, .image-grid video {
-  width: 100%;             /* Take full width of container */
-  height: 500px;            /* Keep original aspect ratio */
-  object-fit: cover;       /* Ensures consistent appearance if cropped */
-  display: block;
+@media (min-width: 760px) {
+  .image-grid img,
+  .image-grid video {
+    width: 100%;
+  height: 760px;
+}
 }
 
+
+/* The label itself */
+.image-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 16px;
+  font-family: var(--main-font);
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+/* Show label only on hover */
+.image-grid a:hover .image-label {
+  opacity: 1;
+}
+
+
+
+
+/* Ensure label is above the veil */
+.image-label {
+  z-index: 2;
+}
+
+
+/* Optional: specific object-position overrides */
 .cukovy-img { object-position: center 10%; }
 .babyark-img { object-position: 20% center; }
-.costume-design-img { object-position: center 90%; } /* fine-tune horizontally */
-.image-grid .nivea-video {
-  height: 400px;          /* let it keep its aspect ratio */
-  /* object-fit: contain;   no cropping */
+.costume-design-img { object-position: center 90%; }
+.nivea-video {
+  height: 400px;
   object-position: 50% 50%;
 }
 .algoflex-img { object-position: center 90%; }
 .upcycled-img { object-position: 27% 20%; }
-.image-grid .johnnie-walker-video {
-  height: 350px;          /* let it keep its aspect ratio */
-  /* object-fit: contain;   no cropping */
+.johnnie-walker-video {
+  height: 350px;
   object-position: 50% 50%;
-}.red-img { object-position: 20% 60%; }
+}
+.red-img { object-position: 20% 60%; }
 
+@media (min-width: 760px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+
+  .algoflex-img {
+    object-position: center 70%;
+  }
+
+  /* White veil overlay ONLY on desktop */
+  .image-grid a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+  }
+
+  .image-grid a:hover::before {
+    opacity: 0;
+  }
+}
 
 
 .content-stack{
@@ -386,16 +458,16 @@ html, body {
   margin-bottom : 10px;
 }
 
-.image-grid {
+/* .image-grid {
 display: flex;
 flex-wrap: wrap;
 gap: 5px;
 justify-content: center;
-}
+} */
 
 .grid-img {
 width: 200px;
-height: 140px;
+height:140px;
 object-fit: cover;
 position: relative;
 }
