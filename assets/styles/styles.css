@@ -265,6 +265,29 @@ html, body {
 .edu-list li strong{ font-weight:600; }
 
 
+
+
+/* Two-column for larger screens */
+@media (min-width: 900px) {
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 150px;
+    align-items: start;
+  }
+  .education .edu-wrapper{
+    text-align: right;
+  }
+
+  .clients .client-title {
+    text-align: right;
+  }
+
+  .education .edu-list {
+    justify-items: end; /* for grid items inside ul */
+  }
+}
+
 /* slider */
 
 
