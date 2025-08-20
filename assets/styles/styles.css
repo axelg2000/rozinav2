@@ -49,6 +49,7 @@ html, body {
   height: 100vh;
   font-family: var(--main-font);
   background-color: #e2e2e2; /* example grey, change as needed */
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -628,7 +629,7 @@ position: relative;
 }
 
 /* Pure CSS chaos */
-.masonry-grid img:nth-child(1)  { transform: rotate(-8deg) translate(-8px, 4px); z-index: 2; }
+/* .masonry-grid img:nth-child(1)  { transform: rotate(-8deg) translate(-8px, 4px); z-index: 2; }
 .masonry-grid img:nth-child(2)  { transform: rotate(6deg) translate(12px, -5px); z-index: 1; }
 .masonry-grid img:nth-child(3)  { transform: rotate(-5deg) translate(-6px, 3px); z-index: 3; }
 .masonry-grid img:nth-child(4)  { transform: rotate(7deg) translate(8px, -4px); z-index: 1; }
@@ -652,7 +653,35 @@ position: relative;
 .masonry-grid img:nth-child(22) { transform: rotate(5deg) translate(9px, -6px); z-index: 1; }
 .masonry-grid img:nth-child(23) { transform: rotate(-3deg) translate(9px, -6px); z-index: 1; }
 .masonry-grid img:nth-child(24) { transform: rotate(5deg) translate(9px, -3px); z-index: 1; }
+ */
 
+
+
+/* Pure CSS chaos - more translation to break the lines */
+.masonry-grid img:nth-child(1)  { transform: translate(-28px, 24px); z-index: 2; }
+.masonry-grid img:nth-child(2)  { transform: translate(1px, -25px); z-index: 1; }
+.masonry-grid img:nth-child(3)  { transform: translate(-26px, 23px); z-index: 3; }
+.masonry-grid img:nth-child(4)  { transform: translate(2px, -24px); z-index: 1; }
+.masonry-grid img:nth-child(5)  { transform: translate(-30px, 25px); z-index: 2; }
+.masonry-grid img:nth-child(6)  { transform: translate(26px, -22px); z-index: 1; }
+.masonry-grid img:nth-child(7)  { transform: translate(-25px, 27px); z-index: 3; }
+.masonry-grid img:nth-child(8)  { transform: translate(27px, -23px); z-index: 2; }
+.masonry-grid img:nth-child(9)  { transform: translate(-27px, 26px); z-index: 1; }
+.masonry-grid img:nth-child(10) { transform: translate(36px, -25px); z-index: 2; }
+.masonry-grid img:nth-child(11) { transform: translate(-24px, 24px); z-index: 1; }
+.masonry-grid img:nth-child(12) { transform: translate(28px, -26px); z-index: 3; }
+.masonry-grid img:nth-child(13) { transform: translate(-26px, 24px); z-index: 2; }
+.masonry-grid img:nth-child(14) { transform: translate(90px, -24px); z-index: 1; }
+.masonry-grid img:nth-child(15) { transform: translate(-28px, 25px); z-index: 3; }
+.masonry-grid img:nth-child(16) { transform: translate(26px, -23px); z-index: 2; }
+.masonry-grid img:nth-child(17) { transform: translate(-25px, 26px); z-index: 1; }
+.masonry-grid img:nth-child(18) { transform: translate(27px, -22px); z-index: 2; }
+.masonry-grid img:nth-child(19) { transform: translate(-26px, 25px); z-index: 3; }
+.masonry-grid img:nth-child(20) { transform: translate(29px, -26px); z-index: 1; }
+.masonry-grid img:nth-child(21) { transform: translate(29px, -26px); z-index: 1; }
+.masonry-grid img:nth-child(22) { transform: translate(29px, -26px); z-index: 1; }
+.masonry-grid img:nth-child(23) { transform: translate(29px, -26px); z-index: 1; }
+.masonry-grid img:nth-child(24) { transform: translate(29px, -23px); z-index: 1; }
 
 .masonry-grid img:hover {
 transform: scale(1.1) rotate(0deg) translate(0, 0);
