@@ -470,7 +470,7 @@ html, body {
 
   .photo-container img:not(.cover-photo) {
     width: 100%;
-    height: 800px; /* or a fixed height if needed */
+    height: 950px; /* or a fixed height if needed */
     object-fit: cover;
   }
 }
