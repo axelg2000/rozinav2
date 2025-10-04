@@ -57,6 +57,9 @@ html, body {
   padding: 8px 10px;
   font-weight: bold;
   font-family: var(--main-font);
+   position: sticky;    /* stays in normal flow, then sticks */
+  top: 0;
+  z-index: 1000; 
 
 
 }
@@ -196,7 +199,7 @@ html, body {
   }
 
   .upcycled-img {
-    object-position: 17%;
+    object-position: 15%;
   }
 
 
