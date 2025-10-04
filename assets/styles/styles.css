@@ -164,7 +164,6 @@ html, body {
 
 
 
-
 /* Ensure label is above the veil */
 .image-label {
   z-index: 2;
@@ -183,6 +182,7 @@ html, body {
 .upcycled-img { object-position: 27% 20%; }
 
 
+
 .red-img { object-position: 20% 60%; }
 
 @media (min-width: 760px) {
@@ -194,6 +194,11 @@ html, body {
   .algoflex-img {
     object-position: center 70%;
   }
+
+  .upcycled-img {
+    object-position: 15%;
+  }
+
 
   /* White veil overlay ONLY on desktop */
   .image-grid a::before {
