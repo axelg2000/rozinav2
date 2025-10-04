@@ -53,18 +53,16 @@ html, body {
 }
 
 .navbar {
-  background-color: #ffffff; /* example grey, change as needed */
+  position: fixed;      /* or: position: sticky; */
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
   padding: 8px 10px;
   font-weight: bold;
   font-family: var(--main-font);
-
-
+  z-index: 1000;        /* z-index works only on positioned elements */
 }
-
-
-
-
-
 
 .navbar-menu {
   list-style: none;
