@@ -474,6 +474,10 @@ html, body {
     height: 950px; /* or a fixed height if needed */
     object-fit: cover;
   }
+  .cover-photo.upcycled-first-image {
+  /* your styles here */
+  height: 1000px !important;
+}
 }
 
 /* Specific focus positions */
@@ -520,7 +524,7 @@ html, body {
   object-position: center 30%;
 }
   .upcycled-first-image {
-    object-position: center 20%;
+    object-position: center 0%;
    
   }
   .upcycled-second-image {
