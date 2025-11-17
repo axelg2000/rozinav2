@@ -121,7 +121,7 @@ html, body {
 @media (max-width: 759px) {
   .image-grid .johnnie-walker-video {
     width: 100%;
-    height: 400px;
+    height: 300px;
   }
 
   .image-grid .nivea-video {
@@ -487,6 +487,7 @@ html, body {
   height: 1000px !important;
 }
 }
+
 
 /* Specific focus positions */
 .focus-center       { object-position: 50% 50%; }
